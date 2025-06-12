@@ -52,6 +52,11 @@ namespace MDWMBlurGlass
 			LoadLanguageString(ui, L"en-US", true, false);
 		}
 
+		if (locale == L"he-IL")
+		{
+			SetProcessDefaultLayout(LAYOUT_RTL);
+		}
+
 		const HWND hWnd = (HWND)ctx->Base()->GetWindowHandle();
 		//SetWindowLongW(hWnd, GWL_STYLE, GetWindowLongW(hWnd, GWL_STYLE) & ~(WS_MAXIMIZEBOX | WS_SIZEBOX));
 		HICON hIcon = LoadIconW(GetModuleHandleW(nullptr), MAKEINTRESOURCE(IDI_ICON1));
